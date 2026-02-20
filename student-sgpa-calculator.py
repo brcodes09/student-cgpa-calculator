@@ -1,5 +1,5 @@
 print("Welcome To Average Grade Pointer App")
-MDC,EG,PF,FESD,ECSE,IDT,AOC,MITT=0
+MDC = EG = PF = FESD = ECSE = IDT = AOC = MITT = 0
 UserMarks=[MDC,EG,PF,FESD,ECSE,IDT,AOC,MITT]
 MDC=int(input("Enter your MDC marks out of 150"))
 EG=int(input("Enter your EG marks out of 150"))
@@ -57,5 +57,6 @@ for items in UserMarkscent:
         for items in UserGrPointer:
             if UserGrPointer[items]==UserMarkscent[items]:
                 UserGrPointer[items]=0
+
 
 Sgpa=(MDCgrpointer*3+EGgrpointer*3+PFgrpointer*4+FESDgrpointer*4+ECSEgrpointer*2+IDTgrpointer+AOCgrpointer*2+MITTgrpointer*2)/20
