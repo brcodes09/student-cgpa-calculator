@@ -32,8 +32,7 @@ print(UserMarkscent) #Prints percent per subject
 UserGrPointer=[0,0,0,0,0,0,0,0] 
 
 #Accesing each index in the UserGrPointer list to assign equivalent Grade pointer
-for i in range(len(UserMarkscent)):
-    marks = UserMarkscent[i]
+for i, marks in enumerate(UserMarkscent):
 
     if marks >= 85:
         UserGrPointer[i] = 10
@@ -56,5 +55,6 @@ print(UserGrPointer) #prints Grade pointer for each subject
 
 #Formula for calculating SGPA
 SGPA=(UserGrPointer[0]*3+UserGrPointer[1]*3+UserGrPointer[2]*4+UserGrPointer[3]*3+UserGrPointer[4]*2+UserGrPointer[5]*1+UserGrPointer[6]*2+UserGrPointer[7]*2)/20
+
 
 print(SGPA) #Prints SGPA
