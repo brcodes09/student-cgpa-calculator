@@ -29,27 +29,27 @@ UserMarkscent=[MDCcent,EGcent,PFcent,FESDcent,ECSEcent,IDTcent,AOCcent,MITTcent]
 print(UserMarkscent) #Prints percent per subject
 
 #Creating a list with 0's, no of 0's in the list is equal to the number of subjects
-UserGrPointer=[0,0,0,0,0,0,0,0] 
+UserGrPointer=[] 
 
 #Accesing each index in the UserGrPointer list to assign equivalent Grade pointer
 for i, marks in enumerate(UserMarkscent):
 
     if marks >= 85:
-        UserGrPointer[i] = 10
+        UserGrPointer.append(10)
     elif marks >= 80:
-        UserGrPointer[i] = 9
+        UserGrPointer.append(9)
     elif marks >= 70:
-        UserGrPointer[i] = 8
+        UserGrPointer.append(8)
     elif marks >= 60:
-        UserGrPointer[i] = 7
+        UserGrPointer.append(7)
     elif marks >= 50:
-        UserGrPointer[i] = 6
+        UserGrPointer.append(6)
     elif marks >= 45:
-        UserGrPointer[i] = 5
+        UserGrPointer.append(5)
     elif marks >= 40:
-        UserGrPointer[i] = 4
+        UserGrPointer.append(4)
     else:
-        UserGrPointer[i] = 0
+        UserGrPointer.append(0)
 
 print(UserGrPointer) #prints Grade pointer for each subject
 
@@ -58,3 +58,4 @@ SGPA=(UserGrPointer[0]*3+UserGrPointer[1]*3+UserGrPointer[2]*4+UserGrPointer[3]*
 
 
 print(SGPA) #Prints SGPA
+
