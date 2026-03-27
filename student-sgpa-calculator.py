@@ -9,48 +9,22 @@ for i in range(NoofSub):
     Subject=input(f"Enter the name of the subject {i+1}:")
     Marks={
         float(input(f"Enter the marks of {Subject}:")):
-    int(input(f"Enter the Total marks of {Subject}:"))
+        int(input(f"Enter the Total marks of {Subject}:"))
     }
     SubjectMarks[Subject]=Marks
     
 print(SubjectMarks)
 
-Credits=[]
+#Calculating Credits
+Credits = []
 
-#Calculating Credits(needs fix)
-for i in range(NoofSub):
-    Credits[i]=SubjectMarks[Subject][Marks]/50
+for subject in SubjectMarks:
+    for marks_obtained, total_marks in SubjectMarks[subject].items():
+        credit = total_marks / 50
+        Credits.append(credit)
 
-#Inputing marks per subject from user
-MDC=float(input("Enter your MDC marks out of 150:"))
-EG=float(input("Enter your EG marks out of 150:"))
-PF=float(input("Enter your PF marks out of 200:"))
-FESD=float(input("Enter your FESD marks out of 150:"))
-ECSE=float(input("Enter your ECSE marks out of 100:"))
-IDT=float(input("Enter your IDT marks out of 50:"))
-AOC=float(input("Enter yout AOC marks out of 100:"))
-MITT=float(input("Enter your MITT marks out of 100:"))
+print(Credits)
 
-UserMarks=[MDC,EG,PF,FESD,ECSE,IDT,AOC,MITT] #Adding it to a list if user needs only marks
-
-print(UserMarks) #Prints marks
-
-#Calculating percentage per  subject for Users marks
-MDCcent=(MDC/150)*100
-EGcent=(EG/150)*100
-PFcent=(PF/200)*100
-FESDcent=(FESD/150)*100
-ECSEcent=(ECSE/100)*100
-IDTcent=(IDT/50)*100
-AOCcent=(AOC/100)*100
-MITTcent=(MITT/100)*100
-
-UserMarkscent=[MDCcent,EGcent,PFcent,FESDcent,ECSEcent,IDTcent,AOCcent,MITTcent]  #Adding it to a list if user needs only Percent
-
-print(UserMarkscent) #Prints percent per subject
-
-#Creating a list with 0's, no of 0's in the list is equal to the number of subjects
-UserGrPointer=[0,0,0,0,0,0,0,0] 
 
 #Accesing each index in the UserGrPointer list to assign equivalent Grade pointer
 for i, marks in enumerate(UserMarkscent):
